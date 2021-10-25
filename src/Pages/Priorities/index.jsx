@@ -8,6 +8,10 @@ function Priorities(history) {
   console.log(subjectPriorities);
   console.log(sortedPriorites);
 
+  function handleClick() {
+    
+  }
+
   return (
     <>
       <div className="inform">
@@ -42,6 +46,16 @@ function Priorities(history) {
           }
         })}
       </div>
+
+      <div className="inform">
+        <button className="generateButton" onClick={handleClick}>
+            {" "}
+            Gerar grade
+        </button>
+      </div>
+      
+
+    
     </>
   );
 }
