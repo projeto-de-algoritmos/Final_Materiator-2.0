@@ -11,34 +11,87 @@ function Priorities(history) {
   function handleClick() {
     
   }
+  
+  function toEmptyString(grade) {
+    grade.forEach(function (coluna, idxCol) {
+
+      for (let index = 0; index < 6; index++) {
+        const linha = coluna[index];
+        if (!linha) {
+          grade[idxCol][index] = " - "
+        }
+      }
+
+    }); 
+  }
+
+  let grade = [
+        [ "C1", , "C1", "C1", , "APC"],
+        [ "APC", , "DIAC", "IAL", "DIAC", ],
+        [ "IAL", ,"IAL" , "APC", , "Fisica1"],
+        [ "EA", ,"EA" , , "IE", ],
+        [ , , , , "EA",],
+        [ , , , , , ],
+      ]
+
+    toEmptyString(grade)
+
 
   return (
     <>
       <div className="inform">
-        <h2> Prioridades</h2>
+        <h1> Grade Horária</h1>
 
         <h3>
-          O número da coluna informa a maior sequência de disciplinas que a
-          disciplina da coluna tranca
+          Grade horária com as matérias prioritárias
         </h3>
       </div>
 
-      {/* {sortedPriorites.map(() => ())} */}
+          <div className="result">
+            
+            <div className="priorityLabel"> - </div>
+
+                <div className="priorityLabel"> SEG </div>
+                <div className="priorityLabel"> TER </div>
+                <div className="priorityLabel"> QUA </div>
+                <div className="priorityLabel"> QUI </div>
+                <div className="priorityLabel"> SEX </div>
+                <div className="priorityLabel"> SAB </div>
+
+          </div>
+
       <div className="result">
-        {sortedPriorites.map((sortedPriority, idx) => {
-          if (sortedPriority.length > 0) {
+
+      <div className="time"> 
+        <div className="priorityLabel">
+          <div className="subjectName">8h </div>
+        </div>
+        <div className="priorityLabel">
+          <div className="subjectName">10h </div>
+        </div>
+        <div className="priorityLabel">
+          <div className="subjectName">12h </div>
+        </div>
+        <div className="priorityLabel">
+          <div className="subjectName">14h </div>
+        </div>
+        <div className="priorityLabel">
+          <div className="subjectName">16h </div>
+        </div>
+        <div className="priorityLabel">
+          <div className="subjectName">18h </div>
+        </div>
+      </div>
+
+        {grade.map((coluna, idx) => {
+          if (coluna.length > 0) {
             return (
               <div className="prioritygroup">
-                <div className="priorityLabel"> {6 - idx}</div>
 
-                {sortedPriority.map((priority, idx) => (
+                {coluna.map((linha, idx) => (
                   <div className="subject" key={idx}>
-                    <div className="subjectName">{priority.subject.value} </div>
-                    <h3>Tranca diretamente:</h3>
-
-                    {priority.subject.adjacents.map((locked, idx) => (
-                      <h4>- {locked}</h4>
-                    ))}
+                    <div className="subjectName">{linha}</div>
+                    
                   </div>
                 ))}
               </div>

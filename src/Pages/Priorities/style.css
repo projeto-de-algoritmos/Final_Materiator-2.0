@@ -6,7 +6,8 @@
 .result {
   display: flex;
   flex-direction: row;
-  margin: 10px;
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
 .prioritygroup {
@@ -17,6 +18,14 @@
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
 }
 
+.time {
+  flex-basis: 500px;
+  margin: 10px;
+  border-radius: 8px;
+  /* background-color: antiquewhite; */
+  /* box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4); */
+}
+
 .subject {
   border-radius: 8px;
   box-shadow: 0px 0px 4px rgb(100, 49, 0);
@@ -24,12 +33,14 @@
 }
 
 .priorityLabel {
+  flex-basis: 500px;
+  margin: 10px;
   background-color: black;
   height: 3rem;
   font-size: 30px;
   text-align: center;
   color: orange;
-  border-radius: 8px 8px 0 0;
+  border-radius: 8px 8px 8px 0;
 }
 
 .subjectName {
