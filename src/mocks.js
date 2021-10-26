@@ -41,10 +41,7 @@ const subjects = {
   PPD: false,
   EPS: false,
   GCES: false,
-  Estágio: false,
   PI2: false,
-  TCC1: false,
-  TCC2: false,
 };
 
 const priorities = {
@@ -90,10 +87,203 @@ const priorities = {
   PPD: [],
   EPS: [],
   GCES: [],
-  Estágio: [],
   PI2: [],
-  TCC1: ["TCC2"],
-  TCC2: [],
 };
 
-export { subjects, priorities };
+const schedule = {
+  C1: [
+    {colunas: [0, 2, 4], linhas: [1, 1, 1]},
+    {colunas: [0, 1, 3], linhas: [0, 0, 0]},
+    {colunas: [0, 1, 3], linhas: [3, 3, 3]}
+  ],
+  APC: [
+    {colunas: [0, 1, 3], linhas: [4, 0, 0]},
+    {colunas: [0, 2, 4], linhas: [3, 1, 1]},
+    {colunas: [0, 2, 4], linhas: [1, 3, 3]},
+  ],
+  DIAC: [
+    {colunas: [0, 2, 4], linhas: [0, 0, 0]},
+    {colunas: [1, 3, 4], linhas: [4, 4, 4]},
+    {colunas: [0, 1, 3], linhas: [1, 1, 1]}
+],
+  EA: [
+    {colunas: [1, 3], linhas: [1, 1]},
+    {colunas: [2, 4], linhas: [0, 0]},
+    {colunas: [0, 2], linhas: [4, 4]}
+  ],
+  IE: [
+    {colunas: [0], linhas: [3]},
+    {colunas: [2], linhas: [3]},
+    {colunas: [0], linhas: [0]}
+  ],
+  C2: [
+    {colunas: [0, 2, 4], linhas: [0, 0, 0]},
+    {colunas: [1, 3, 4], linhas: [3, 3, 3]},
+    {colunas: [0, 1, 3], linhas: [1, 1, 1]}
+],
+  Física1: [
+    {colunas: [0, 2], linhas: [4, 4]},
+    {colunas: [1, 3], linhas: [4, 4]},
+    {colunas: [2, 4], linhas: [3, 3]},
+    {colunas: [1, 3], linhas: [0, 0]}
+  ],
+  FisicaExperimental1: [
+    {colunas: [0], linhas: [3]},
+    {colunas: [0], linhas: [4]},
+    {colunas: [1], linhas: [1]},
+    {colunas: [3], linhas: [1]},
+    {colunas: [4], linhas: [3]},
+    {colunas: [4], linhas: [4]},
+    {colunas: [4], linhas: [1]},
+    {colunas: [1], linhas: [4]},
+    {colunas: [2], linhas: [1]},
+    {colunas: [1], linhas: [3]},
+    {colunas: [0], linhas: [1]},
+    {colunas: [3], linhas: [3]},
+    {colunas: [3], linhas: [4]}
+  ],
+  IAL: [
+    {colunas: [1, 3], linhas: [0, 0]},
+    {colunas: [0, 2], linhas: [1, 1]},
+    {colunas: [2, 4], linhas: [3, 3]},
+    {colunas: [1, 3], linhas: [1, 1]}
+  ],
+  PE: [
+    {colunas: [2, 4], linhas: [3, 3]},
+    {colunas: [2, 4], linhas: [1, 1]}
+  ],
+  DS: [
+    {colunas: [0, 4], linhas: [4, 4]},
+  ],
+  Métodos: [
+    {colunas: [0, 2], linhas: [0, 0]},
+    {colunas: [0, 2], linhas: [4, 4]},
+    {colunas: [2, 4], linhas: [4, 4]},
+    {colunas: [1, 3], linhas: [0, 0]}
+  ],
+  EE: [
+    {colunas: [2, 4], linhas: [4, 4]},
+    {colunas: [1, 3], linhas: [1, 1]},
+    {colunas: [3, 4], linhas: [0, 0]}
+  ],
+  Humanidades: [
+    {colunas: [1, 3], linhas: [3, 3]},
+    {colunas: [2, 4], linhas: [3, 3]}
+  ],
+  TED1: [
+    {colunas: [2, 4], linhas: [0, 0]},
+    {colunas: [2, 4], linhas: [3, 3]}
+  ],
+  PED1: [
+    {colunas: [4], linhas: [4]},
+    {colunas: [2], linhas: [4]},
+    {colunas: [0], linhas: [1]},
+    {colunas: [0], linhas: [4]},
+    {colunas: [0], linhas: [3]},
+    {colunas: [0], linhas: [0]},
+    {colunas: [0], linhas: [1]},
+    {colunas: [1], linhas: [0]},
+    {colunas: [1], linhas: [1]},
+    {colunas: [3], linhas: [1]},
+    {colunas: [4], linhas: [1]},
+    {colunas: [3], linhas: [0]},
+    {colunas: [4], linhas: [0]}
+  ],
+  OO: [
+    {colunas: [0, 2], linhas: [3, 3]},
+    {colunas: [0, 2], linhas: [0, 0]},
+    {colunas: [0, 2], linhas: [4, 4]}
+  ],
+  MD1: [
+    {colunas: [2, 4], linhas: [3, 3]},
+    {colunas: [0, 4], linhas: [4, 4]}
+  ],
+  GPEQ: [
+    {colunas: [1, 3], linhas: [3, 3]},
+    {colunas: [1, 3], linhas: [4, 4]}
+  ],
+  MDS: [
+    {colunas: [1, 3], linhas: [1, 1]},
+    {colunas: [1, 3], linhas: [4, 4]},
+    {colunas: [1, 3], linhas: [1, 1]}
+  ],
+  EDA1: [
+    {colunas: [1, 3], linhas: [3, 3]},
+    {colunas: [1, 3], linhas: [1, 1]},
+    {colunas: [1, 3], linhas: [1, 1]}
+  ],
+  FAC: [
+    {colunas: [0, 2], linhas: [1, 1]},
+    {colunas: [0, 4], linhas: [0, 0]}
+  ],
+  MD2: [
+    {colunas: [0, 4], linhas: [3, 3]}
+],
+  PI1: [
+    {colunas: [0, 2], linhas: [4, 4]}
+  ],
+  IHC: [
+    {colunas: [1, 3], linhas: [0, 0]},
+    {colunas: [0, 2], linhas: [1, 1]}
+  ],
+  Requisitos: [
+    {colunas: [1, 3], linhas: [1, 1]},
+    {colunas: [1, 3], linhas: [3, 3]}
+  ],
+  SBD1: [
+    {colunas: [1, 3], linhas: [3, 3]}
+  ],
+  FSO: [
+    {colunas: [0, 2], linhas: [4, 4]}
+  ],
+  Compiladores1: [
+    {colunas: [2, 4], linhas: [3, 3]}
+  ],
+  EDA2: [
+    {colunas: [0, 2], linhas: [0, 0]}
+  ],
+  Qualidade: [
+    {colunas: [1, 3], linhas: [1, 1]}
+  ],
+  Testes: [
+    {colunas: [0, 2], linhas: [4, 4]},
+    {colunas: [0, 2], linhas: [5, 5]}
+  ],
+  Desenho: [
+    {colunas: [0, 4], linhas: [0, 0]}
+  ],
+  FRC: [
+    {colunas: [0, 2], linhas: [4, 4]}
+  ],
+  SBD2: [
+    {colunas: [1, 3], linhas: [0, 0]}
+],
+  PA: [
+    {colunas: [0, 4], linhas: [1, 1]}
+  ],
+  TecProg: [
+    {colunas: [0, 2], linhas: [4, 4]}
+  ],
+  Paradigmas: [
+    {colunas: [0, 4], linhas: [1, 1]},
+    {colunas: [0, 2], linhas: [3, 3]}
+  ],
+  FSE: [
+    {colunas: [1, 3], linhas: [1, 1]}
+  ],
+  PPD: [
+    {colunas: [2, 4], linhas: [1, 1]}
+  ],
+  EPS: [
+    {colunas: [1, 3], linhas: [3, 3]}
+  ],
+  GCES: [
+    {colunas: [1, 3], linhas: [4, 4]}
+  ],
+  PI2: [
+    {colunas: [2, 4, 4], linhas: [4, 3, 4]}
+  ],
+}
+
+
+export { subjects, priorities, schedule };
