@@ -35,7 +35,7 @@ Para rodar o projeto localmente, é necessário possuir npm instalado
 Primeiramente clone o repositório em sua máquina local.
 
 ```
-git clone https://github.com/projeto-de-algoritmos/Grafos2_PlayWays.git
+git clone git@github.com:projeto-de-algoritmos/Final_Materiator-2.0.git
 ```
 
 Rode o comando a seguir para instalar as depêndencias
