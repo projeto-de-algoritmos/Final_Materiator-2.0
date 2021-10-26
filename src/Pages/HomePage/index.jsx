@@ -15,26 +15,24 @@ function HomePage() {
 
       <h1 className="question">
         {" "}
-        Se você é estudante de Engenharia de Software da FGA, aqui você consegue: 
+        Se você é estudante de Engenharia de Software da FGA, aqui você
+        consegue:
       </h1>
       <br />
 
       <h2 className="question">
-      -{'>'} descobrir facilmente quais as matérias prioritárias para se matricular <br />
-      -{'>'}  gerar uma grade horária baseada nessas prioridades e em quantas matérias você deseja cursar
+        -{">"} gerar uma grade horária baseada nas prioridades de acordo com as
+        matérias que você já fez
       </h2>
       <br />
 
       <h2 className="question">
-      Tudo isso levando em consideração as disciplinas que você já cursou e os pré-requisitos de todas.
-      <br />
-      Basta selecionar as disciplinas que já cursou e quantas quer cursar nesse semestre, e assim lhe será mostrado 
-      listas das matérias com prioridade 1, 2, 3... Após isso, clique em "Gerar grade" para visualizar a grade horária baseada nas 
-      prioridades e na quantidade de disciplinas que você escolheu fazer
+        <br />
+        Basta selecionar as disciplinas que já cursou e clicar em "Gerar grade"
+        para visualizar a grade horária condizente com as disciplinas que você
+        já cursou.
       </h2>
 
-      
-      <br />
       <br />
 
       <button className="generateButton" onClick={handleClick}>

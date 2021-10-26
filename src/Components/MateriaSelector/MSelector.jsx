@@ -25,7 +25,7 @@ export default function MSelector() {
       let subjectPriorities = generateGraph(state);
       history.push({
         pathname: "/prioridades",
-        state: { subjectPriorities: subjectPriorities },
+        state: { subjectPriorities: subjectPriorities, userSubjects: state },
       });
     } catch (err) {
       setModal({
@@ -56,7 +56,7 @@ export default function MSelector() {
       <br />
       <button className="generateButton" onClick={handleClick}>
         {" "}
-        Gerar Prioridades
+        Gerar Grade
       </button>
 
       <Modal
