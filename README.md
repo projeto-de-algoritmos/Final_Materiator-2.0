@@ -10,7 +10,12 @@
 | 18/0013637  |  Arthur Paiva Tavares |
 
 ## Sobre 
-Descreva os objetivos do seu projeto e como ele funciona. 
+Depois do Materiator, agora temos o Materiator 2.0! 
+O Materiator teve como objetivo mostrar ao usuário, a relação de disciplinas que são mais relevantes de cursar, com base na quantidade de outras disciplinas que ela tranca. 
+
+Materiator: https://github.com/projeto-de-algoritmos/Grafos1_Materiator
+
+Agora, na sua mais nova versão, o Mateirator 2.0 tem como o objetivo gerar uma grade horária, com base nas disciplinas que possuem maior prioridade. Para utilizar o programa, basta selecionar quais disciplinas o usuário já finalizou e clicar no botão "Gerar grade". Assim, será exibida a sua grade horária montada, indicando quais disciplinas seria mais interessante cursar.
 
 ## Screenshots
 Adicione 3 ou mais screenshots do projeto em funcionamento.
